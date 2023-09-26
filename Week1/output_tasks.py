@@ -18,7 +18,6 @@ print("\' Displays a single quote")
 print("\t\t\"I am programming!\"")
 
 # Display a box
-# Display a box
 print("##########")
 print("#        #")
 print("#        #")
