@@ -15,3 +15,15 @@ while noOfObs < obsToAvoidInt:
     print("Avoiding...", end="")
     noOfObs += 1
     print(f"Done {noOfObs} obstacles avoided!")
+
+
+barsToChangeInt = int(input("How many bars should be charged? "))
+noOfBarsCharged = 0
+bar = "█ "
+
+while noOfBarsCharged < barsToChangeInt:
+    noOfBarsCharged += 1
+    print("Charging:", end="")
+    print(f"{noOfBarsCharged * bar}")
+print("The battery is fully charged.")
+
