@@ -11,3 +11,24 @@ for count in range(numOfMountains):
     print("/  ^     ^    \\")
 
 print("Done!")
+
+# Count down
+
+
+howFar = int(input("How far are we from the target? "))
+print(howFar)
+
+for count in range(howFar, 0, -1):
+    print(f"{count} steps remaining")
+
+print("Target achieved!")
+
+# cheat way
+howFar = int(input("How far are we from the target? "))
+print(howFar)
+
+for count in range(howFar):
+    print(f"{howFar - count} steps remaining")
+
+print("Target achieved!")
+
