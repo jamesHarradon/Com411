@@ -27,3 +27,9 @@ while noOfBarsCharged < barsToChangeInt:
     print(f"{noOfBarsCharged * bar}")
 print("The battery is fully charged.")
 
+phrase = input("Please enter a phrase: ")
+print(phrase)
+phraseLength = len(phrase)
+while phraseLength > 0:
+    print("Hi ", end="")
+    phraseLength -= 1
