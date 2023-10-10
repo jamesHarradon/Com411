@@ -49,7 +49,17 @@ while num < 101:
 print(f"Done! The answer is {total}")
 
 
+# Sum user numbers
 
+total = 0
+count = 0
+amountOfNumsToAdd = int(input("How many numbers should I sum up? "))
+while count < amountOfNumsToAdd:
+    numToAdd = int(input(f"Please enter number {count + 1} of {amountOfNumsToAdd} : "))
+    total += numToAdd
+    count += 1
+
+print(f"The answer is {total}")
 
 
 
