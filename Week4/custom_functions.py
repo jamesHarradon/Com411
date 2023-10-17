@@ -47,3 +47,21 @@ def cross_bridge(stepsCrossed):
 cross_bridge(3)
 cross_bridge(6)
 
+def climb_ladder(stepsRemaining, stepsCrossed):
+    if stepsRemaining > stepsCrossed:
+        print("Still some way to go!")
+    else:
+        print("We are almost there!")
+
+climb_ladder(5, 2)
+climb_ladder(2, 5)
+
+def climb_ladder_loop(stepsRemaining, stepsCrossed):
+    while stepsCrossed < stepsRemaining:
+        print("Still some way to go!")
+        stepsCrossed += 1
+    print("We are almost there!")
+
+
+climb_ladder_loop(5,2)
+climb_ladder_loop(2, 5)
