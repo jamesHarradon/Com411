@@ -4,3 +4,14 @@ def listen():
 
 
 listen()
+
+
+def identify():
+    see = input("What can you see? ")
+    print(see)
+    if see == "a large boulder":
+        print("It's time to run!")
+    else:
+        print("We will be fine.")
+
+identify()
