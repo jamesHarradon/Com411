@@ -11,3 +11,20 @@ def run_task1():
 # and not when it is imported into another module
 if __name__ == "__main__":
     run_task1()
+
+
+
+def movements():
+    path = ["Move Forward", 10, "Move Backward", 5, "Move Left", 3, "Move Right", 1]
+    return path
+
+
+def run_task2():
+    print("Moving...")
+    path = movements()
+    for x in range(0, len(path), 2):
+        print(f"{path[x]} for {path[x+1]} steps")
+
+
+run_task2()
+
