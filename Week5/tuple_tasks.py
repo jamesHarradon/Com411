@@ -26,3 +26,22 @@ def run_task2():
     print(f"Maximum likelihood of falling: {maxVal}%")
 
 run_task2()
+
+
+def steps():
+    likelihoods = [("step 1", 50), ("step 2", 38), ("step 3", 27), ("step 4", 99), ("step 5", 4)]
+    return likelihoods
+
+def run_task3():
+    step_list = steps()
+    good_steps = []
+    bad_steps = []
+    for i in range(len(step_list)):
+        if step_list[i][1] >= 50:
+            good_steps.append(step_list[i])
+        else:
+            bad_steps.append(step_list[i])
+
+    print(f"Good steps: {len(good_steps)}, Bad steps: {len(bad_steps)}")
+
+run_task3()
