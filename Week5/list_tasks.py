@@ -26,5 +26,16 @@ def run_task2():
         print(f"{path[x]} for {path[x+1]} steps")
 
 
+
 run_task2()
 
+def menu():
+    print("Please select a direction: ")
+    list = directions()
+    for i in range(len(list)):
+        print(f"{i}: {list[i]}")
+
+def run_task3():
+    menu()
+
+run_task3()
