@@ -11,7 +11,7 @@ def run():
     print("Processing...")
     cwd()
 
-#run()
+# run()
 
 
 def display_chars(file_path, no_of_chars_to_be_read):
@@ -35,5 +35,19 @@ def run_task2():
     display_line("library.txt")
     display_text("library.txt")
 
+# add the following code to the end of your file so that it executes the function run_task2 when the file is executed directly.
 if __name__ == "__main__":
     run_task2()
+
+
+def search(file_name):
+    print("Searching...")
+    with open(file_name) as file:
+        for line in file:
+            print(f"Looked in: {line}")
+            print("...Done!")
+
+def run_task3():
+    search("library.txt")
+
+run_task3()
