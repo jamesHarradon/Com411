@@ -36,8 +36,8 @@ def run_task2():
     display_text("library.txt")
 
 # add the following code to the end of your file so that it executes the function run_task2 when the file is executed directly.
-if __name__ == "__main__":
-    run_task2()
+# if __name__ == "__main__":
+#     run_task2()
 
 
 def search(file_name):
@@ -50,4 +50,31 @@ def search(file_name):
 def run_task3():
     search("library.txt")
 
-run_task3()
+# run_task3()
+
+
+
+def search_books(file_path):
+    print("Searching...")
+    sections = ""
+    books = "Books:\n"
+    with open(file_path) as file:
+        for line in file:
+            if line.startswith("Section"):
+                sections += line + "\n"
+            else:
+                books += line + "\n"
+        print("Done!")
+    return f"{sections}\n\n{books}"
+
+def save(file_path, data):
+    print("Saving...")
+    with open(file_path, "w") as file:
+        file.write(data)
+    print("Done!")
+
+def run_task4():
+    data = search_books("books.txt")
+    save("section-books.txt", data)
+
+run_task4()
