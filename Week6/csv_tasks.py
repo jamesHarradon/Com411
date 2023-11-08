@@ -50,6 +50,3 @@ def run_task3():
     export("exported_items.csv", 2)
 
 run_task3()    
-
-
-
