@@ -31,7 +31,25 @@ def extract(file_path):
     print(names)
 
 def run_task2():
-    extract("clothing.csv")
+    extract("exported_items.csv")
     
 run_task2()
+
+def export(file_path, no_of_items):
+    print("Exporting...")
+    with open(file_path, "a") as file:
+        for item in range(no_of_items):
+            item_id = input("Enter item ID: ")
+            item_name = input("Enter item name: ")
+            item_colour = input("Enter item colour: ")
+            data_to_write = f"{item_id},{item_name},{item_colour}\n"
+            file.write(data_to_write)
+    print("Done!")
+
+def run_task3():
+    export("exported_items.csv", 2)
+
+run_task3()    
+
+
 
