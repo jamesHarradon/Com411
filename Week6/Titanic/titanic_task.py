@@ -38,7 +38,21 @@ def display_passengers_per_gender():
     for record in records:
         if record[4] == "male": males += 1
         if record[4] == "female": females += 1
-    print(f"{males} males, {females} females")         
+    print(f"{males} males, {females} females")  
+
+def display_passengers_per_age_group():
+    children = 0
+    adults = 0
+    elderly = 0
+    for record in records:
+        age = record[5]
+        if age == "": continue
+        # float here because there are decimal ages for some reason - you can convert string float/int to float but not to int.
+        age_float = float(age)
+        if age_float < 18: children += 1
+        elif age_float < 65: adults += 1
+        else: elderly += 1      
+    print(f"{children} children, {adults} adults, {elderly} elderly")
 
 def run():
     load_data("titanic.csv")
@@ -52,6 +66,8 @@ def run():
         display_num_survivors()
     elif selected_option == 3:
         display_passengers_per_gender()
+    elif selected_option == 4:
+        display_passengers_per_age_group()
     else:
         print("Error! Option not recognised")
 
