@@ -42,7 +42,7 @@ def long_pattern():
 def run_task3():
     print("Analysing patterns...")
     sequences = {"short sequence": short_pattern(), "medium sequence": medium_pattern(), "long sequence": long_pattern()}
-    print(sequences)
+    # remember to do items() not items without brackets!!
     for key, value in sequences.items():
         print(f"{key}: {value} ")
 
