@@ -22,9 +22,27 @@ def menu():
     [tally]      Tally up medals
     [ctally]     Tally up medals for each team
     [exit]       Exit the program
-    
     '''
-    selection = input(menu_display)
+    print(menu_display)
+    selection = input()
+    print(dashes())
     print(f"Your selection: {selection}")
 
-menu()
+def display_medal_tally(tally):
+    for key, value in tally.items():
+        print(f"|{key:<10}| {value:<10}|")
+
+def display_medal_tally(team_tally):
+    for key, values in team_tally.items():
+        name = key
+        medals = values
+        print("\n" + name)
+        for key, value in medals.items():
+            print(f"|{key:<10}| {value:<5}|")
+
+def display_years(years):
+    desc_years = list(years)
+    desc_years.reverse()
+    for year in desc_years:
+        print(year)
+
