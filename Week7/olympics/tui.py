@@ -27,12 +27,13 @@ def menu():
     selection = input()
     print(dashes())
     print(f"Your selection: {selection}")
+    return selection
 
 def display_medal_tally(tally):
     for key, value in tally.items():
         print(f"|{key:<10}| {value:<10}|")
 
-def display_medal_tally(team_tally):
+def display_team_medal_tally(team_tally):
     for key, values in team_tally.items():
         name = key
         medals = values
