@@ -20,7 +20,7 @@ def menu():
     menu_display = '''
     [years]      List unique years
     [tally]      Tally up medals
-    [ctally]     Tally up medals for each team
+    [team]       Tally up medals for each team
     [exit]       Exit the program
     '''
     print(menu_display)
