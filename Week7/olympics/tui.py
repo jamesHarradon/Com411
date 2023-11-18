@@ -42,8 +42,6 @@ def display_team_medal_tally(team_tally):
             print(f"|{key:<10}| {value:<5}|")
 
 def display_years(years):
-    desc_years = list(years)
-    desc_years.reverse()
-    for year in desc_years:
+    for year in years:
         print(year)
 

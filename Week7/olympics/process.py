@@ -5,7 +5,10 @@ def list_years(data):
     years = set()
     for row in data:
         years.add(row[9])
-    tui.display_years(years)
+    list_years = list(years)
+    list_years.sort()
+    list_years.reverse()
+    tui.display_years(list_years)
     tui.completed()
 
 def tally_medals(data):
@@ -36,6 +39,6 @@ def tally_team_medals(data):
     tui.completed()
 
     
-        
+   
             
 
