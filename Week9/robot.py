@@ -15,7 +15,22 @@ class Robot:
     def __str__(self):
         return f"Robot {self.name} is {self.age} years old."
 
+    def grow(self):
+        self.age += 1
+
+    def eat(self, amount):
+        if self.energy + amount > 100:
+            print(f"Energy is {self.energy}. Cannot exceed Max Energy of {self.MAX_ENERGY}")
+        self.energy += amount
+
+    def move(self, distance):
+        if self.energy - distance < 0:
+            print(f"Energy is {self.energy}. Cannot reduce energy to below 0")
+
 
 if __name__ == "__main__":
     robot = Robot()
     robot.display()
+
+    print(robot)
+    print(repr(robot))
