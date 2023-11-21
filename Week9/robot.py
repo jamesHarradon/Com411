@@ -1,7 +1,7 @@
 class Robot:
     MAX_ENERGY = 100
 
-    def __init__(self, name="Robot", age=0, energy=0):
+    def __init__(self, name, age=0, energy=0):
         self.name = name
         self.age = age
         self.energy = energy
@@ -29,7 +29,7 @@ class Robot:
 
 
 if __name__ == "__main__":
-    robot = Robot()
+    robot = Robot("Terminator")
     robot.display()
 
     print(robot)
