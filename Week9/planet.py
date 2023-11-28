@@ -2,23 +2,14 @@ import robot
 import human
 class Planet:
     def __init__(self, name):
-        self.inhabitants = {
-            "humans": [],
-            "robots": []
-        }
+        self.inhabitants = []
         self.name = name
 
-    def add_human(self, human_obj):
-        self.inhabitants["humans"].append(human_obj)
+    def add_inhabitant(self, inhabitant_obj):
+        self.inhabitants.append(inhabitant_obj)
 
-    def remove_human(self, human_obj):
-        self.inhabitants["humans"].append(human_obj)
-
-    def add_robot(self, robot_obj):
-        self.inhabitants["robots"].append(robot_obj)
-
-    def remove_robot(self, robot_obj):
-        self.inhabitants["robots"].remove(robot_obj)
+    def remove_inhabitant(self, inhabitant_obj):
+        self.inhabitants.append(inhabitant_obj)
 
     def __repr__(self):
         return f"Planet(name={self.name}, inhabitants={self.inhabitants})"
