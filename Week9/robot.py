@@ -1,36 +1,32 @@
-class Robot:
-    MAX_ENERGY = 100
+from inhabitant import Inhabitant
+
+class Robot(Inhabitant):
+
+    laws = ""
 
     def __init__(self, name, age=0, energy=0):
         self.name = name
         self.age = age
         self.energy = energy
 
-    def display(self):
-        print(f"I am {self.name}")
+
+    def the_laws(self):
+        pass
 
     def __repr__(self):
-        return f"robot(name={self.name}, age={self.age})"
+      return f"Robot(name={self.name}, age={self.age}, energy={self.energy})"
 
     def __str__(self):
-        return f"Robot {self.name} is {self.age} years old."
-
-    def grow(self):
-        self.age += 1
-
-    def eat(self, amount):
-        if self.energy + amount > 100:
-            print(f"Energy is {self.energy}. Cannot exceed Max Energy of {self.MAX_ENERGY}")
-        self.energy += amount
-
-    def move(self, distance):
-        if self.energy - distance < 0:
-            print(f"Energy is {self.energy}. Cannot reduce energy to below 0")
+      return f"Robot name: {self.name}, age={self.age}, energy: {self.energy}"
 
 
 if __name__ == "__main__":
-    robot = Robot("Terminator")
-    robot.display()
 
-    print(robot)
+    # create an object of type Human
+    robot = Robot("Jeff")
+
+    # display the current state of the object
     print(repr(robot))
+
+    # invoke the method move on the object
+    robot.move(10)

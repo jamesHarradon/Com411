@@ -3,6 +3,7 @@ from robot import Robot
 from human import Human
 import random
 
+
 class Universe:
 
     planets = []
@@ -21,6 +22,10 @@ class Universe:
             planet.add_robot(robot)
 
         self.planets.append(planet)
+
+    def show_populations(self, selection):
+        pass
+
 
 
 universe = Universe()
